@@ -52,13 +52,24 @@
       text-decoration: none;
     }
 
-    .nav-contact {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-link {
       font-size: 14px;
       color: var(--muted);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .nav-contact:hover { color: var(--text); }
+    .nav-link:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .nav-links { gap: 16px; }
+      .nav-link { font-size: 13px; }
+    }
 
     /* ── Hero ────────────────────────────────────────────── */
     .hero {
@@ -302,7 +313,11 @@
   <!-- Nav -->
   <nav>
     <a href="/" class="nav-logo">Foundr Technologies</a>
-    <a href="mailto:info@foundrtechnologies.com" class="nav-contact">info@foundrtechnologies.com</a>
+    <div class="nav-links">
+      <a href="/story.html" class="nav-link">Our Story</a>
+      <a href="/mission.html" class="nav-link">Mission</a>
+      <a href="/#contact" class="nav-link">Contact</a>
+    </div>
   </nav>
 
   <!-- Hero -->
@@ -369,7 +384,11 @@
   <!-- Footer -->
   <footer>
     <span class="footer-copy">&copy; 2026 Foundr Technologies. All rights reserved.</span>
-    <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+    <div style="display:flex; gap:24px; flex-wrap:wrap;">
+      <a href="/story.html" class="footer-link">Our Story</a>
+      <a href="/mission.html" class="footer-link">Mission</a>
+      <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+    </div>
   </footer>
 
 </body>
